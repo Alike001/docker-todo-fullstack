@@ -1,0 +1,83 @@
+  .container {
+    max-width: 500px;
+    margin: 2rem auto;
+    background: white;                        
+    padding: 2rem;                        
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);                                                                                                                            
+  }                                           
+                                                                                                                                                                         
+  h1 {                                                            
+    margin-top: 0;                                                                                                                                                       
+  }
+                                                                                                                                                                         
+  form {                                                          
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }                                           
+                                          
+  input {
+    flex: 1;                                                                                                                                                             
+    padding: 0.5rem;
+    border: 1px solid #ddd;                                                                                                                                              
+    border-radius: 4px;                                           
+    font-size: 1rem;
+  }                                           
+                                          
+  form button {
+    padding: 0.5rem 1rem;                                                                                                                                                
+    background: #4caf50;
+    color: white;                                                                                                                                                        
+    border: none;                                                 
+    border-radius: 4px;
+    cursor: pointer;
+  }                                           
+                                          
+  form button:hover {
+    background: #45a049;                                                                                                                                                 
+  }
+                                                                                                                                                                         
+  ul {                                                            
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {                                        
+    display: flex;                        
+    align-items: center;
+    justify-content: space-between;                                                                                                                                      
+    padding: 0.75rem;
+    border-bottom: 1px solid #eee;                                                                                                                                       
+  }                                                               
+
+  li:last-child {                             
+    border-bottom: none;                  
+  }
+                                                                                                                                                                         
+  li span {
+    cursor: pointer;                                                                                                                                                     
+    flex: 1;                                                      
+  }
+
+  li.done span {
+    text-decoration: line-through;
+    color: #999;
+  }                                           
+                                          
+  li button {
+    background: none;                                                                                                                                                    
+    border: none;
+    color: #f44336;                                                                                                                                                      
+    font-size: 1.5rem;                                            
+    cursor: pointer;
+  }
+
+  .error {
+    background: #ffebee;
+    color: #c62828;                           
+    padding: 0.5rem;                      
+    border-radius: 4px;
+    margin-bottom: 1rem;                                                                                                                                                 
+  }
