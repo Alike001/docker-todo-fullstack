@@ -1,9 +1,13 @@
   const express = require('express');
-  const cors = require('cors');                                                                                                                                          
-  const Database = require('better-sqlite3');                     
+  const cors = require('cors');
+  const Database = require('better-sqlite3');
+  const fs = require('fs');
+  const path = require('path');
 
   const app = express();
-  const db = new Database('todos.db');
+  const dataDir = path.join(__dirname, 'data');
+  fs.mkdirSync(dataDir, { recursive: true });
+  const db = new Database(path.join(dataDir, 'todos.db'));
 
   db.exec(`
     CREATE TABLE IF NOT EXISTS todos (
