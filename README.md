@@ -1,5 +1,7 @@
 # docker-todo-fullstack
 
+[![CI](https://github.com/Alike001/docker-todo-fullstack/actions/workflows/ci.yml/badge.svg)](https://github.com/Alike001/docker-todo-fullstack/actions/workflows/ci.yml)
+
 A full-stack to-do app built end-to-end and dockerized with Docker Compose. One command spins up the frontend, backend, and a persistent database.
 
 ## Stack
