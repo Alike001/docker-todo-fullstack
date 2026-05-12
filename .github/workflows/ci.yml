@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: build & lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Frontend — install deps
+        working-directory: ./frontend
+        run: npm ci
+
+      - name: Frontend — lint
+        working-directory: ./frontend
+        run: npm run lint
+
+      - name: Frontend — build (tsc + vite)
+        working-directory: ./frontend
+        run: npm run build
+
+      - name: Backend — install deps
+        working-directory: ./backend
+        run: npm ci
+
+      - name: Docker — build all services
+        run: docker compose build
